@@ -1,38 +1,14 @@
 <!DOCTYPE html>
-<html ng-app ="wApp">
+<html ng-app ="twitchApp">
     <head >
-        <!-- google cds for Ajs 1.5 version -->
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular.min.js"></script>-->
-        
         <!-- using angular 1.5 beta 2.0 version -->
          <script src="src/vendor/angular.min.js"></script> 
-        <script src="src/weatherApp.js"></script>
+        <script src="src/twitchApp.js"></script>
         <!-- bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="css/myStyle.css">
     </head>
-    <body ng-controller ="weatherController" >
-        <div >
-<!--            <button ng-click="getLocalWeather()">Get Local Weather</button>-->
-            <h1>{{message}}</h1>
-        </div>
-         <div>
-      <h1>Forecast For {{ place.location.city }}</h1>
-      
-      <h3><img class="img-thumbnail forecast-img" src="http://l.yimg.com/a/i/us/we/52/{{place.item.condition.code}}.gif" />Current: {{ place.item.condition.text }} | {{ place.item.condition.temp }}° C </h3>
-      <div class="row">
-        <div class="col-xs-6" ng-repeat="forecast in place.item.forecast">
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h4><img class="img-thumbnail forecast-img" src="http://l.yimg.com/a/i/us/we/52/{{forecast.code}}.gif" /><strong>{{ forecast.date }}</strong></h4>
-            </div>
-            <div class="panel-body">
-              <p>{{ forecast.text }}</p>
-              <p>H: {{ forecast.high }}° C | L: {{ forecast.low }}° C</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <body ng-controller ="twitchController" >
+        
     </body>
 </html>
